@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Jogo da Velha</title>
 </head>
 
 <body>
-    <script src=""></script>
+    <h1>Jogo da Velha com JavaScript</h1>
+
+    <div id="buttons-container">
+        <button id="doisJogadores">2° Jogadores</button>
+        <button id="contraComputador">Contra o Computador</button>
+    </div>
+
+    <div id="container" class="hide">
+        <div class="box" id="box-1"></div>
+        <div class="box" id="box-2"></div>
+        <div class="box" id="box-3"></div>
+        <div class="box" id="box-4"></div>
+        <div class="box" id="box-5"></div>
+        <div class="box" id="box-6"></div>
+        <div class="box" id="box-7"></div>
+        <div class="box" id="box-8"></div>
+        <div class="box" id="box-9"></div>
+        
+        <div id="score-container">
+            <span class="score-box">
+                <span id="x-score">X:</span>:
+                <span id="score-1">0</span>
+            </span>
+            <span class="score-box">
+                <span id="o-score"></span>:
+                <span id="score-2">0</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="hide">
+        <div class="x">X</div>
+        <div class="o"></div>
+    </div>
+
+    <div id="message" class="hide">
+        <p></p>
+    </div>
+    <script src="/js/script.js"></script>
 </body>
 </html>
