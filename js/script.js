@@ -54,17 +54,16 @@ function checharCondicaoVitoria() {
      let box8 = document.getElementById("box-8");
      let box9 = document.getElementById("box-9");
 
+     // verificação horizontal:
      if((box1.childNodes.length > 0) && (box2.childNodes.length > 0) && (box3.childNodes.length > 0)) {
         let box1Child = box1.childNodes[0].className;
         let box2Child = box2.childNodes[0].className;
         let box3Child = box3.childNodes[0].className;
 
         if(box1Child == 'x' && box2Child == 'x' && box3Child == 'x') {
-            // x vitória
             console.log("O x venceu");
         }
         else if(box1Child == 'o' && box2Child == 'o' && box3Child == 'o') {
-            // o vitória
             console.log("o foi o vencedor");
         }
      }
@@ -75,11 +74,9 @@ function checharCondicaoVitoria() {
         let box6Child = box6.childNodes[0].className;
 
         if(box4Child == 'x' && box5Child == 'x' && box6Child == 'x') {
-            // x vitória
             console.log("O x venceu");
         }
         else if(box4Child == 'o' && box5Child == 'o' && box6Child == 'o') {
-            // o vitória
             console.log("o foi o vencedor");
         }
      }
@@ -90,11 +87,49 @@ function checharCondicaoVitoria() {
         let box9Child = box9.childNodes[0].className;
 
         if(box7Child == 'x' && box8Child == 'x' && box9Child == 'x') {
-            // x vitória
             console.log("O x venceu");
         }
         else if(box7Child == 'o' && box8Child == 'o' && box9Child == 'o') {
-            // o vitória
+            console.log("o foi o vencedor");
+        }
+     }
+
+     // verificação vertical:
+     if((box1.childNodes.length > 0) && (box4.childNodes.length > 0) && (box7.childNodes.length > 0)) {
+        let box1Child = box1.childNodes[0].className;
+        let box4Child = box4.childNodes[0].className;
+        let box7Child = box7.childNodes[0].className;
+
+        if(box1Child == 'x' && box4Child == 'x' && box7Child == 'x') {
+            console.log("O x venceu");
+        }
+        else if(box1Child == 'o' && box4Child == 'o' && box7Child == 'o') {
+            console.log("o foi o vencedor");
+        }
+     }
+
+     if((box2.childNodes.length > 0) && (box5.childNodes.length > 0) && (box8.childNodes.length > 0)) {
+        let box2Child = box2.childNodes[0].className;
+        let box5Child = box5.childNodes[0].className;
+        let box8Child = box8.childNodes[0].className;
+
+        if(box2Child == 'x' && box5Child == 'x' && box8Child == 'x') {
+            console.log("O x venceu");
+        }
+        else if(box2Child == 'o' && box5Child == 'o' && box8Child == 'o') {
+            console.log("o foi o vencedor");
+        }
+     }
+
+     if((box3.childNodes.length > 0) && (box6.childNodes.length > 0) && (box9.childNodes.length > 0)) {
+        let box3Child = box3.childNodes[0].className;
+        let box6Child = box6.childNodes[0].className;
+        let box9Child = box9.childNodes[0].className;
+
+        if(box3Child == 'x' && box6Child == 'x' && box9Child == 'x') {
+            console.log("O x venceu");
+        }
+        else if(box3Child == 'o' && box6Child == 'o' && box9Child == 'o') {
             console.log("o foi o vencedor");
         }
      }
