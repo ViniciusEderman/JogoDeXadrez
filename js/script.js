@@ -192,4 +192,17 @@ function declarVencer(winner) {
 
     messagesText.innerHTML = msg;
     message.classList.remove("hide");
+
+    setTimeout(function () {
+        message.classList.add("hide");
+    }, 3000);
+
+    player1 = 0;
+    player2 = 0;
+
+    let boxesRemove = document.querySelectorAll(".box div");
+
+    for(let i = 0; i < boxesRemove.length; i++) {
+        boxesRemove[i].parentNode.removeChild(boxesRemove[i]);
+    }
 }
