@@ -133,4 +133,42 @@ function checharCondicaoVitoria() {
             console.log("o foi o vencedor");
         }
      }
+
+     // verifacação de vitória na diagonal:
+     if((box1.childNodes.length > 0) && (box5.childNodes.length > 0) && (box9.childNodes.length > 0)) {
+        let box1Child = box1.childNodes[0].className;
+        let box5Child = box5.childNodes[0].className;
+        let box9Child = box9.childNodes[0].className;
+
+        if(box1Child == 'x' && box5Child == 'x' && box9Child == 'x') {
+            console.log("O x venceu");
+        }
+        else if(box1Child == 'o' && box5Child == 'o' && box9Child == 'o') {
+            console.log("o foi o vencedor");
+        }
+     }
+
+     if((box3.childNodes.length > 0) && (box5.childNodes.length > 0) && (box7.childNodes.length > 0)) {
+        let box3Child = box3.childNodes[0].className;
+        let box5Child = box5.childNodes[0].className;
+        let box7Child = box7.childNodes[0].className;
+
+        if(box3Child == 'x' && box5Child == 'x' && box7Child == 'x') {
+            console.log("O x venceu");
+        }
+        else if(box3Child == 'o' && box5Child == 'o' && box7Child == 'o') {
+            console.log("o foi o vencedor");
+        }
+     }
+     //condição de empate:
+     let counter = 0;
+     for(let i = 0; i < boxes.length; i++) {
+        if(boxes[i].childNodes[0] != undefined) {
+            counter++;
+        }
+     }
+
+     if(counter == 9) {
+        console.log("Deu velha");
+     }
 }
