@@ -22,12 +22,31 @@ for(let i = 0; i < boxes.length; i++) {
 
             if(player1 ==  player2) {
                 player1++;
+                if(secondPLayer == 'contraComputador') {
+                    computerPlay();
+                    player2++;
+                }
             }
             else {
                 player2++
             }
             checharCondicaoVitoria();
         }
+    });
+}
+
+for(let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function() {
+        secondPLayer = this.getAttribute("id");
+
+        for(j = 0; j < buttons.length; j++) {
+            buttons[j].style.display = 'none';
+        }
+
+        setTimeout(function() {
+            let container = document.querySelector("#container");
+            container.classList.remove("hide");
+        }, 500);
     });
 }
 
@@ -204,5 +223,29 @@ function declarVencer(winner) {
 
     for(let i = 0; i < boxesRemove.length; i++) {
         boxesRemove[i].parentNode.removeChild(boxesRemove[i]);
+    }
+}
+
+function computerPlay() {
+    let cloneO = o.cloneNode(true);
+    counter = 0;
+    filled = 0;
+
+    for(let i = 0; i < boxes.length; i++) {
+        let randomNumber = Math.floor(Math.random() * 5);
+
+        if(boxes[i].childNodes[0] == undefined) {
+            if(randomNumber <= 1) {
+                boxes[i].appendChild(cloneO);
+                counter++;
+                break;
+            }
+        }
+        else {
+            filled++;
+        }
+    }
+    if(counter == 0 && filled < 9) {
+        computerPlay();
     }
 }
