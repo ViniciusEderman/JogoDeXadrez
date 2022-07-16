@@ -8,7 +8,7 @@
     Como foi apenas um treinamento, 
     não há necessidade levar este projeto como algo que deve evoluir constantemente
 
-# ⚡ O JavaScrip deste projeto:
+# ⚡ O JavaScript deste projeto:
     Ao abrir o folder: js e o script.js,
     você irá notar que foquei bastante em usar functions para organizar da melhor forma o código
     -O projeto conta com 6 funções, que busca validar e acionar coisas distintas
